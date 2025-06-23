@@ -20,6 +20,11 @@ x-n8n: &service-n8n
     - N8N_ENCRYPTION_KEY
     - N8N_USER_MANAGEMENT_JWT_SECRET
     - OLLAMA_HOST=ollama:11434
+    - N8N_COMMUNITY_PACKAGES_ALLOW_TOOL_USAGE=true
+    - N8N_EDITOR_BASE_URL=https://careful-goat-key.ngrok-free.app/
+    - WEBHOOK_URL=https://careful-goat-key.ngrok-free.app/
+    - N8N_DEFAULT_BINARY_DATA_MODE=filesystem
+    - GENERIC_TIMEZONE=Asia/Ho_Chi_Minh
   env_file:
     - .env
 
