@@ -80,8 +80,12 @@ services:
       - "n8n import:credentials --separate --input=/demo-data/credentials && n8n import:workflow --separate --input=/demo-data/workflows"
     volumes:
       - ./n8n/demo-data:/demo-data
+    env_file:
+      - .env  # <--- MAKE SURE THIS LINE EXISTS
     depends_on:
       postgres:
+        condition: service_healthy
+      n8n:
         condition: service_healthy
 
   n8n:
